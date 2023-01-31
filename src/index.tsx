@@ -1,8 +1,9 @@
-import { render } from "react-dom";
-import { App } from "./App";
-import "./global.css";
+import React from "react";
+import { createRoot } from 'react-dom/client';
 
-const root = document.createElement("div");
-document.body.appendChild(root);
-
-render(<App />, root);
+// コンポーネント読み込み
+import App from "./components/App";
+ 
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
