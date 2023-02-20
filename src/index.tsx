@@ -5,8 +5,9 @@ import { render } from "react-dom";
 import App from "./components/App";
 import './components/global.css';
  
-const root = document.getElementById('root');
+const root = document.createElement("div");
 // const root = createRoot(container); // createRoot(container!) if you use TypeScript
-// root.render(<App />);
+document.body.appendChild(root);
 
+// root.render(<App />);
 render(<App />, root);

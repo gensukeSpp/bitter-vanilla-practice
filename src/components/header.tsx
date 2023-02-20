@@ -2,10 +2,11 @@ import { headerAbove } from "./style.css";
 
 const AboveHeader = () => {
 
+	const bgImage = "./img/header_bg.jpg";
 	return (
-		<div className={headerAbove.wrapper}>
+		<div style={{backgroundImage: `url(${bgImage})`}} className={headerAbove.wrapper}>
 			<div className={headerAbove.belt}>
-				<img src="../../img/header_01.jpg" alt="右にメニュー" className={headerAbove.belt__Image} />
+				<img src="./img/header_01.jpg" alt="右にメニュー" className={headerAbove.belt__Image} />
 				<ul className={headerAbove.right__List}>
 					<li><span></span><a href="./news">お知らせ</a></li>
 					<li><span></span><a href="./access">交通案内</a></li>
@@ -13,7 +14,7 @@ const AboveHeader = () => {
 					<li><span></span><a href="./contact">お問合せ</a></li>
 				</ul>    
 			</div>
-			<div class="top-logo"><img src="../../img/logo.jpg" alt="白骨温泉" /></div>
+			<div className="top-logo"><img src="./img/logo.jpg" alt="白骨温泉" /></div>
 		</div>
 	);
 }
@@ -41,7 +42,7 @@ const AboveHeader = () => {
 export const Header = () => {
 
 	return (
-		<header>
+		<header style={{width: "76vw", margin: "0 auto"}}>
 			<AboveHeader />
 			{/* <BelowHeader /> */}
 		</header>

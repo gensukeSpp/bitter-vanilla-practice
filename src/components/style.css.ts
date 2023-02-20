@@ -1,8 +1,16 @@
 import { style } from '@vanilla-extract/css';
 
+// const bgHeader = './img/header.jpg';
+const child = style({
+	display: 'inline-block'
+});
+
 export const headerAbove = {
 	wrapper: style({
-		backgroundImage: `url(./img/header_bg.jpg)`
+		display: 'block',
+		// backgroundImage: `url(${bgHeader})`,
+		backgroundSize: 'contain',
+		backgroundRepeat: 'no-repeat'
 	}),
 	belt: style({
 		display: 'grid',
@@ -15,11 +23,22 @@ export const headerAbove = {
 	right__List: style({
 		display: 'flex',
 		flexWrap: 'wrap',
-		flexDirection: 'column'
-	}),
-	selectors: {
-		'&:> li': {
-			fontSize: '0.75em'
+		flexDirection: 'column',
+		selectors:{
+			'& > li': {
+				textDecoration: 'underline'
+			}
 		}
-	}
+	}),
 }
+
+// export const styleList = style({
+// 	selectors:{
+// 		// :{
+// 		// 		border: 'medium'
+// 		// },
+// 		[`${headerAbove.right__List} li`]:{
+// 			textDecoration: 'underline'
+// 		}
+// 	}
+// })
