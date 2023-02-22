@@ -8,3 +8,8 @@ globalStyle("body, body *", {
   padding: 0,
   margin: 0,
 });
+
+globalStyle(`body > .container`, {
+  display: 'block',
+  width: '100%'
+});

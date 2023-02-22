@@ -1,44 +1,29 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
-// const bgHeader = './img/header.jpg';
-const child = style({
-	display: 'inline-block'
+// const bgImage = "./img/header_bg.jpg";
+export const bgWrapper = style({
+	// backgroundImage: `url(${bgImage})`,
+	display: 'grid',
+	gridTemplateColumns: '1fr',
+	width: 'inherit'
 });
 
-export const headerAbove = {
-	wrapper: style({
-		display: 'block',
-		// backgroundImage: `url(${bgHeader})`,
-		backgroundSize: 'contain',
-		backgroundRepeat: 'no-repeat'
-	}),
-	belt: style({
-		display: 'grid',
-		gridTemplateColumns: '1fr'
-	}),
-	belt__Image: style({
-		objectFit: 'contain',
-		width: 'inherit'
-	}),
-	right__List: style({
-		display: 'flex',
-		flexWrap: 'wrap',
-		flexDirection: 'column',
-		selectors:{
-			'& > li': {
-				textDecoration: 'underline'
-			}
-		}
-	}),
-}
+globalStyle(`${bgWrapper} > *`, {
+	objectFit: 'cover',
+	width: 'inherit',
+	gridArea: '1/1'
+});
 
-// export const styleList = style({
-// 	selectors:{
-// 		// :{
-// 		// 		border: 'medium'
-// 		// },
-// 		[`${headerAbove.right__List} li`]:{
-// 			textDecoration: 'underline'
-// 		}
-// 	}
-// })
+export const ul__Menu = style({
+	fontSize: '0.75em',
+	textAlign: 'right'
+});
+
+// globalStyle(`${ul__Menu} > li::before`, {
+// 	content: '""',
+// 	backgroundImage: 'url(./img/arrow.gif)'
+// });
+
+export const logo__Image = style({
+	gridArea: 'initial'
+});
