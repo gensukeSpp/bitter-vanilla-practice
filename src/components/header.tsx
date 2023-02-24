@@ -2,15 +2,21 @@ import * as headers from "./style.css";
 
 const AboveHeader = () => {
 
-	const bgImage = "./img/header_bg.jpg";
+	// const bgImage = "./img/header_bg.jpg";
+	// const fourMenu = {
+	// 	"news": "お知らせ",
+	// 	"accsess": "交通案内",
+	// 	"reserve": "宿泊予約",
+	// 	"contact": "お問合せ"
+	// }
 	return (
-		<div style={{backgroundImage: `url(${bgImage})`}} className={headers.bgWrapper}>
+		<div className={headers.bgWrapper}>
 			<img src="./img/header_01.jpg" alt="右にメニュー" />
 			<ul className={headers.ul__Menu}>
-				<li><a href="./news">お知らせ</a></li>
-				<li><a href="./access">交通案内</a></li>
-				<li><a href="./reserve">宿泊予約</a></li>
-				<li><a href="./contact">お問合せ</a></li>
+				<li className={headers.li__Menu}><a href="./news">お知らせ</a></li>
+				<li className={headers.li__Menu}><a href="./access">交通案内</a></li>
+				<li className={headers.li__Menu}><a href="./reserve">宿泊予約</a></li>
+				<li className={headers.li__Menu}><a href="./contact">お問合せ</a></li>
 			</ul>
 			<img src="./img/logo.jpg" alt="白骨温泉" className={headers.logo__Image} />
 		</div>
