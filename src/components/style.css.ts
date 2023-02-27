@@ -1,9 +1,8 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 
-// const bgImage = "../../public/img/header_bg.jpg";
-
 export const bgWrapper = style({
-	backgroundImage: 'url("~/public/img/header_bg.jpg")',
+	// https://stackoverflow.com/questions/57483171/how-can-i-resolve-background-image-url-inside-sass-file-using-webpack-4
+	// backgroundImage: 'url("~/public/img/header_bg.jpg")',
 	display: 'grid',
 	gridTemplateColumns: '1fr',
 	width: 'inherit'
@@ -16,7 +15,7 @@ globalStyle(`${bgWrapper} > *`, {
 	gridArea: '1/1'
 });
 
-export const ul__Menu = style({
+export const ul__RightMenu = style({
 	fontSize: '0.75em',
 	textAlign: 'right'
 });
@@ -38,4 +37,18 @@ export const li__Menu = style({
 
 export const logo__Image = style({
 	gridArea: 'initial'
+});
+
+export const main__Image = style({
+	objectFit: 'contain',
+	width: 'inherit'
+});
+
+export const bgWrapper__Rows = style({
+	gridTemplateRows: '10% 90%'
+});
+
+export const ul__MainMenu = style({
+	gridRowStart: '2',
+	textAlign: 'center'
 });
