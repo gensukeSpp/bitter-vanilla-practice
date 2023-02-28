@@ -20,7 +20,7 @@ export const ul__RightMenu = style({
 	textAlign: 'right'
 });
 
-export const li__Menu = style({
+export const li__RightMenu = style({
 	padding: '0 1%',
 	selectors: {
 		'&::before': {
@@ -50,5 +50,12 @@ export const bgWrapper__Rows = style({
 
 export const ul__MainMenu = style({
 	gridRowStart: '2',
-	textAlign: 'center'
+	textAlign: 'center',
+	height: '50%',
+	overflow: 'hidden'
 });
+
+export const li__MainMenu = style({
+	display: 'inline-block',
+	width: '10.5%'
+})

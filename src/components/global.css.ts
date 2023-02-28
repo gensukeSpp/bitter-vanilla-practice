@@ -13,3 +13,14 @@ globalStyle(`body > .container`, {
   display: 'block',
   width: '100%'
 });
+
+globalStyle(`a`, {
+  width: '100%',
+  height: '100%',
+  cursor: 'pointer'
+})
+
+globalStyle(`img`, {
+  objectFit: 'contain',
+  width: 'inherit'
+});
